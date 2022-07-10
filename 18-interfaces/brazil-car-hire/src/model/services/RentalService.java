@@ -40,7 +40,7 @@ public class RentalService {
 		if (totalTime <= 12.0) {
 			basicPayment = pricePerHour * Math.ceil(totalTime);
 		} else {
-			basicPayment = pricePerDay * Math.ceil(totalTime);
+			basicPayment = pricePerDay * Math.ceil(totalTime / 24);
 		}
 		
 		carRental.setInvoice(new Invoice(basicPayment, taxService.tax(basicPayment)));

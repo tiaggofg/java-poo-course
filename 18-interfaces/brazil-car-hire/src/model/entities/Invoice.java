@@ -33,6 +33,6 @@ public class Invoice {
 	
 	@Override
 	public String toString() {
-		return "INVOICE\nBasic Payment: " + basicPayment + "\nTax: " + tax + "\nTotal Payment: " + totalPayment;
+		return "INVOICE\nBasic Payment: " + String.format("%.2f", basicPayment) + "\nTax: " + String.format("%.2f", tax) + "\nTotal Payment: " + String.format("%.2", totalPayment);
 	}
 }
