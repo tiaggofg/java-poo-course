@@ -30,4 +30,9 @@ public class Invoice {
 	public void calculeTotalPayment() {
 		totalPayment = basicPayment + tax;
 	}
+	
+	@Override
+	public String toString() {
+		return "INVOICE\nBasic Payment: " + basicPayment + "\nTax: " + tax + "\nTotal Payment: " + totalPayment;
+	}
 }
